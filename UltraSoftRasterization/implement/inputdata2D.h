@@ -6,17 +6,12 @@
 #ifndef __INPUT_DATA_2D__
 #define __INPUT_DATA_2D__
 
-#include <vector>
 #include "inputdatabase.h"
+#include "math/vector.h"
+#include <vector>
 
-struct Point2D
-{
-	Point2D(float x, float y) : _x(x), _y(y)
-	{};
-
-	float _x;
-	float _y;
-};
+// 软光栅化的2D数据
+// 目前负责load数据为独立的vertex和index
 
 class InputData2D : public InputDataBase
 {
@@ -25,9 +20,16 @@ public:
 
 	~InputData2D();
 
-	virtual void loadData();
+	virtual void loadVertexData();
+
+	virtual void loadIndexData();
+
+	const std::vector<Point2D> getVextexData();
+
+	const std::vector<Uint32> getIndexData();
 
 private:
+	std::vector<Uint32> _indexes;
 	std::vector<Point2D> _points;
 };
 

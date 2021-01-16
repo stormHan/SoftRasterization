@@ -22,6 +22,9 @@
     <Filter Include="头文件\math">
       <UniqueIdentifier>{b4743772-36df-49b5-9431-725eb1113a2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\rasterization">
+      <UniqueIdentifier>{ec9f2e7d-6b7e-4581-92ac-0de917c65a5d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entrance.cpp">
@@ -32,6 +35,9 @@
     </ClCompile>
     <ClCompile Include="..\implement\inputdate2D.cpp">
       <Filter>源文件\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\implement\rasterization\geometrymanager.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +52,18 @@
     </ClInclude>
     <ClInclude Include="..\implement\tools\time.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\math\commondefine.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\math\vector.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\math\triangle.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\rasterization\geometrymanager.h">
+      <Filter>头文件\rasterization</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

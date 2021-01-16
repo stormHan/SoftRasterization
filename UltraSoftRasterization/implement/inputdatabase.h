@@ -11,9 +11,16 @@ class InputDataBase
 public:
 
 	InputDataBase();
-	~InputDataBase();
 
-	virtual void loadData() = 0;
+	virtual ~InputDataBase();
+
+	virtual void loadData();
+
+	virtual void loadIndexData() = 0;
+
+	virtual void loadVertexData() = 0;
+
+	void indexDataCheck();
 
 private:
 

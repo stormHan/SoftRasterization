@@ -8,17 +8,17 @@
 
 #include <iostream>
 
-void Log(const char* logstr)
+inline void Log(const char* logstr)
 {
 	std::cout << "[LogWarning] " << logstr << std::endl;
 }
 
-void LogWarning(const char* logstr)
+inline void LogWarning(const char* logstr)
 {
 	std::cout << "[LogWarning] " << logstr << std::endl;
 }
 
-void LogError(const char* logstr)
+inline void LogError(const char* logstr)
 {
 	std::cout << "[LogError] " << logstr << std::endl;
 }

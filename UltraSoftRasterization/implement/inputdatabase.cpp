@@ -8,3 +8,17 @@ InputDataBase::InputDataBase()
 
 InputDataBase::~InputDataBase()
 {}
+
+void InputDataBase::loadData()
+{
+	loadVertexData();
+
+	loadIndexData();
+
+	indexDataCheck();
+}
+
+void InputDataBase::indexDataCheck()
+{
+	// Todo
+}
