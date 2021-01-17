@@ -31,6 +31,9 @@
 *.out
 *.app
 
+# Debug
+*.pdb
+
 #--- stormhan---
 # User
 *.user
@@ -38,3 +41,5 @@
 */.vs
 */Debug
 */rasterization/Debug
+*/x64
+*/rasterization/x64/Debug
