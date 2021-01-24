@@ -146,15 +146,20 @@
     <ClCompile Include="..\implement\inputdatabase.cpp" />
     <ClCompile Include="..\implement\inputdate2D.cpp" />
     <ClCompile Include="..\implement\rasterization\geometrymanager.cpp" />
+    <ClCompile Include="..\implement\rasterization\pixel.cpp" />
+    <ClCompile Include="..\implement\rasterization\rendertarget.cpp" />
     <ClCompile Include="entrance.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\implement\inputdata2D.h" />
     <ClInclude Include="..\implement\inputdatabase.h" />
+    <ClInclude Include="..\implement\math\color.h" />
     <ClInclude Include="..\implement\math\commondefine.h" />
     <ClInclude Include="..\implement\math\triangle.h" />
     <ClInclude Include="..\implement\math\vector.h" />
     <ClInclude Include="..\implement\rasterization\geometrymanager.h" />
+    <ClInclude Include="..\implement\rasterization\pixel.h" />
+    <ClInclude Include="..\implement\rasterization\rendertarget.h" />
     <ClInclude Include="..\implement\tools\logger.h" />
     <ClInclude Include="..\implement\tools\time.h" />
   </ItemGroup>

@@ -24,6 +24,8 @@ namespace rasterization
 		bool injectRenderData(const std::vector<Point2D>& vertex, const std::vector<Uint32>& indexes);
 
 		void setInputData2D(InputData2D* input_data);
+
+		
 	private:
 		static GeometryManager* _instance;
 		GeometryManager();

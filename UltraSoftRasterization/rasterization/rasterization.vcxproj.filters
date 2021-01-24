@@ -39,6 +39,12 @@
     <ClCompile Include="..\implement\rasterization\geometrymanager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\implement\rasterization\rendertarget.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\implement\rasterization\pixel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\implement\inputdata2D.h">
@@ -64,6 +70,15 @@
     </ClInclude>
     <ClInclude Include="..\implement\rasterization\geometrymanager.h">
       <Filter>头文件\rasterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\rasterization\rendertarget.h">
+      <Filter>头文件\rasterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\rasterization\pixel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\math\color.h">
+      <Filter>头文件\math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
