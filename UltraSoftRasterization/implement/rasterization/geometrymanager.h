@@ -25,12 +25,12 @@ namespace rasterization
 
 		void setInputData2D(InputData2D* input_data);
 
-		
+		GeometryManager(const GeometryManager& rhs) = delete;
+		GeometryManager& operator=(const GeometryManager& rhs) = delete;
+
 	private:
 		static GeometryManager* _instance;
 		GeometryManager();
-		GeometryManager(const GeometryManager& rhs);
-		GeometryManager& operator=(const GeometryManager& rhs);
 		~GeometryManager();
 
 		InputData2D* _input_data;

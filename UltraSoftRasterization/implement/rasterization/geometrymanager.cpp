@@ -28,16 +28,6 @@ namespace rasterization
 		
 	}
 
-	GeometryManager::GeometryManager(const GeometryManager& rhs)
-	{
-		_input_data = rhs._input_data;
-	}
-
-	GeometryManager& GeometryManager::operator=(const GeometryManager& rhs)
-	{
-		return *this;
-	}
-
 	bool GeometryManager::injectRenderData()
 	{
 		if (_input_data == nullptr)
