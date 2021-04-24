@@ -42,7 +42,8 @@ namespace rasterization
 
 	private:
 		RenderTargetDesc* _desc;
-		PixelMat _render_target;
+		Pixel* _render_target;
+
 		Color* _bg_color;
 		float _bg_depth;
 	};

@@ -32,7 +32,14 @@ namespace rasterization
 		_bg_color = new Color(1.0, 1.0, 1.0, 1.0); // default color: White
 		_bg_depth = 1.0;
 
-		_render_target = PixelMat(h, PixelRow(w, Pixel(*_bg_color, _bg_depth)));
+		_render_target = new Pixel[w * h];
+		
+		memset(_render_target, 1.0f, sizeof(Pixel) * w * h);
+		//for (Uint32 i = 0; i < w * h; ++i)
+		//{
+		//	_render_target[i].setColor(*_bg_color);
+		//	_render_target[i].setDepth(1.0f);
+		//}
 	}
 
 	RenderTarget::~RenderTarget()
