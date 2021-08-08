@@ -9,8 +9,11 @@ template <typename T>
 class Vector2
 {
 public:
-	Vector2(const T& x, const T& y) : _x(x), _y(y)
+	Vector2(T x, T y) : _x(x), _y(y)
 	{}
+
+	/*Vector2(const T& x, const T& y) : _x(x), _y(y)
+	{}*/
 
 	Vector2(const Vector2& vec2) : _x(vec2._x), _y(vec2._y)
 	{}

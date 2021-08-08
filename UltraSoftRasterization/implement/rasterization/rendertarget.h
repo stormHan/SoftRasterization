@@ -7,6 +7,7 @@
 #define __RENDER_TARGET__
 
 #include <vector>
+#include <memory>
 
 #include "math/commondefine.h"
 #include "pixel.h"
@@ -39,6 +40,8 @@ namespace rasterization
 		~RenderTarget();
 
 		const RenderTargetDesc* getRenderTargetDesc() const;
+
+		void clear();
 
 	private:
 		RenderTargetDesc* _desc;

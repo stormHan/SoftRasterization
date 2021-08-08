@@ -33,13 +33,24 @@ namespace rasterization
 		_bg_depth = 1.0;
 
 		_render_target = new Pixel[w * h];
-		
-		memset(_render_target, 1.0f, sizeof(Pixel) * w * h);
-		//for (Uint32 i = 0; i < w * h; ++i)
-		//{
-		//	_render_target[i].setColor(*_bg_color);
-		//	_render_target[i].setDepth(1.0f);
-		//}
+		memset(_render_target, 0, sizeof(Pixel) * w * h);
+
+		/*for (Uint32 i = 0; i < w * h; ++i)
+		{
+			_render_target[i].setColor(*_bg_color);
+			_render_target[i].setDepth(1.0f);
+		}*/
+	}
+
+	void RenderTarget::clear()
+	{
+		Uint32 w = _desc->getWidth(), h = _desc->getHeight();
+
+		for (Uint32 i = 0; i < w * h; ++i)
+		{
+			_render_target[i].setColor(*_bg_color);
+			_render_target[i].setDepth(1.0f);
+		}
 	}
 
 	RenderTarget::~RenderTarget()
@@ -49,6 +60,9 @@ namespace rasterization
 
 		delete _bg_color;
 		_bg_color = nullptr;
+
+		delete[] _render_target;
+		_render_target = nullptr;
 	}
 
 	const RenderTargetDesc* RenderTarget::getRenderTargetDesc() const

@@ -38,6 +38,8 @@ public:
 	Vector2<T> _p3;
 };
 
+typedef Vector2<Float>	Point2D;
+
 typedef Triangle2D<Float>	Triangle2Df;
 typedef Triangle2D<Float64> Triangle2Dd;
 
