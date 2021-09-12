@@ -42,5 +42,5 @@ public:
 };
 
 typedef Vector2<Float> Point2D;
-
+typedef Vector2<Uint32> Point2Di;
 #endif // __VECTOR__

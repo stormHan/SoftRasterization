@@ -52,6 +52,28 @@ namespace rasterization
 			_render_target[i].setDepth(1.0f);
 		}
 	}
+	void RenderTarget::setColor(const Uint32& x, const Uint32& y, const Color& color)
+	{
+		if (x >= _desc->getWidth() || y >= _desc->getHeight())
+		{
+			LogWarning("[RenderTarget] setColor failed , w or h oversize");
+			return;
+		}
+
+		//setRawColor
+		_render_target[y * _desc->getWidth() + x].setColor(color);
+	}
+
+	const Color& RenderTarget::getColor(const Uint32& x, const Uint32& y)
+	{
+		if (x >= _desc->getWidth() || y >= _desc->getHeight())
+		{
+			LogWarning("[RenderTarget] getColor failed , w or h oversize");
+			return Color();
+		}
+
+		return _render_target[y * _desc->getWidth() + x].getColor();
+	}
 
 	RenderTarget::~RenderTarget()
 	{

@@ -39,4 +39,9 @@ namespace rasterization
 	{
 		_depth = depth;
 	}
+
+	Color& Pixel::getColor()
+	{
+		return _color;
+	}
 }

@@ -61,4 +61,9 @@ namespace rasterization
 	{
 		_input_data = input_data;
 	}
+
+	std::vector<Triangle2Df>& GeometryManager::getTriangles2D()
+	{
+		return _triangle2Ds;
+	}
 }

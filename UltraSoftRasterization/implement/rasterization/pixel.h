@@ -37,6 +37,8 @@ namespace rasterization
 
 		void setDepth(float depth);
 
+		Color& getColor();
+
 	private:
 		Color _color;
 		float _depth;

@@ -48,6 +48,9 @@
     <ClCompile Include="..\implement\rasterization\raster.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\implement\rasterization\displayment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\implement\inputdata2D.h">
@@ -84,6 +87,9 @@
       <Filter>头文件\math</Filter>
     </ClInclude>
     <ClInclude Include="..\implement\rasterization\raster.h">
+      <Filter>头文件\rasterization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\implement\rasterization\displayment.h">
       <Filter>头文件\rasterization</Filter>
     </ClInclude>
   </ItemGroup>

@@ -28,6 +28,8 @@ namespace rasterization
 		GeometryManager(const GeometryManager& rhs) = delete;
 		GeometryManager& operator=(const GeometryManager& rhs) = delete;
 
+		std::vector<Triangle2Df>& getTriangles2D();
+
 	private:
 		static GeometryManager* _instance;
 		GeometryManager();

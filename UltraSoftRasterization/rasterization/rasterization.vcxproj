@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="..\implement\inputdatabase.cpp" />
     <ClCompile Include="..\implement\inputdate2D.cpp" />
+    <ClCompile Include="..\implement\rasterization\displayment.cpp" />
     <ClCompile Include="..\implement\rasterization\geometrymanager.cpp" />
     <ClCompile Include="..\implement\rasterization\pixel.cpp" />
     <ClCompile Include="..\implement\rasterization\raster.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="..\implement\math\commondefine.h" />
     <ClInclude Include="..\implement\math\triangle.h" />
     <ClInclude Include="..\implement\math\vector.h" />
+    <ClInclude Include="..\implement\rasterization\displayment.h" />
     <ClInclude Include="..\implement\rasterization\geometrymanager.h" />
     <ClInclude Include="..\implement\rasterization\pixel.h" />
     <ClInclude Include="..\implement\rasterization\raster.h" />

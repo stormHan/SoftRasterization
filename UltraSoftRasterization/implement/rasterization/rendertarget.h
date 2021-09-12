@@ -9,6 +9,7 @@
 #include <vector>
 #include <memory>
 
+#include "tools/logger.h"
 #include "math/commondefine.h"
 #include "pixel.h"
 
@@ -40,6 +41,10 @@ namespace rasterization
 		~RenderTarget();
 
 		const RenderTargetDesc* getRenderTargetDesc() const;
+
+		void setColor(const Uint32& x, const Uint32& y, const Color& color);
+
+		const Color& getColor(const Uint32& x, const Uint32& y);
 
 		void clear();
 
