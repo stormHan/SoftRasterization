@@ -20,15 +20,18 @@ public:
 
 	Vector2& operator =(const Vector2& rhs)
 	{
-		return Vector2(rhs._x, rhs._y);
+		this->_x = rhs._x;
+		this->_y = rhs._y;
+
+		return *this;
 	}
 
-	Vector2& operator +(const Vector2& rhs)
+	Vector2 operator +(const Vector2& rhs)
 	{
 		return Vector2(_x + rhs._x, _y + rhs._y);
 	}
 
-	Vector2& operator -(const Vector2& rhs)
+	Vector2 operator -(const Vector2& rhs)
 	{
 		return Vector2(_x - rhs._x, _y - rhs._y);
 	}
@@ -41,6 +44,61 @@ public:
 	T _y;
 };
 
-typedef Vector2<Float> Point2D;
-typedef Vector2<Uint32> Point2Di;
+template <class T>
+class Vector3
+{
+public:
+
+	Vector3(T x0, T y0, T z0) : x(x0), y(y0), z(z0)
+	{}
+
+	Vector3(const Vector3& rhs) : x(rhs.x), y(rhs.y), z(rhs.z)
+	{}
+
+
+	~Vector3()
+	{}
+
+	Vector3& operator =(const Vector3& rhs)
+	{
+		this->x = rhs.x;
+		this->y = rhs.y;
+		this->z = rhs.z;
+
+		return *this;
+	}
+
+	Vector3 operator +(const Vector3& rhs)
+	{
+		return Vector3(x + rhs.x, y + rhs.y, z + rhs.z);
+	}
+
+	Vector3 operator -(const Vector3& rhs)
+	{
+		return Vector3(x - rhs.x, y - rhs.y, z - rhs.z);
+	}
+
+	Vector3 cross(const Vector3& rhs) const
+	{
+		T x0 = y * rhs.z - z * rhs.y;
+		T y0 = z * rhs.x - x * rhs.z;
+		T z0 = x * rhs.y - y * rhs.x;
+		return Vector3(x0, y0, z0);
+	}
+
+	Float dot(const Vector3& rhs) const
+	{
+		return x * rhs.x + y * rhs.y + z * rhs.z;
+	}
+
+	T x;
+	T y;
+	T z;
+};
+
+typedef Vector2<Float> Point2D, Vector2f;
+typedef Vector2<Uint32> Point2Di, Vector2ui;
+
+typedef Vector3<Float> Vector3f;
+typedef Vector3<int>   Vector3i;
 #endif // __VECTOR__

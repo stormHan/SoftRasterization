@@ -20,7 +20,7 @@ namespace rasterization
 		void raster2D(std::shared_ptr<RenderTarget> rt, const std::vector<Triangle2Df>& triangles, const Color& color);
 
 		// 对一个2D的三角形数据在一张rt上做数据的写入.
-		void rasterSingleTriangle(std::shared_ptr<RenderTarget> rt, const Triangle2Df& tri);
+		void fillTriangle(std::shared_ptr<RenderTarget> rt, const Triangle2Df& tri, const Color& color);
 
 		// 画线
 		void drawLine(std::shared_ptr<RenderTarget> rt, const Point2Di& v1, const Point2Di& v2, const Color& color);
@@ -33,6 +33,7 @@ namespace rasterization
 
 		bool _is_multisample;
 
+		static const Vector3f computeBarycenterCoordinates(const Triangle2Dui& tri, const Point2Di& point);
 	};
 }
 

@@ -42,5 +42,6 @@ typedef Vector2<Float>	Point2D;
 
 typedef Triangle2D<Float>	Triangle2Df;
 typedef Triangle2D<Float64> Triangle2Dd;
-
+typedef Triangle2D<Uint32>  Triangle2Dui;
+typedef Triangle2D<int>  Triangle2Di;
 #endif //__TRIANGLE__
