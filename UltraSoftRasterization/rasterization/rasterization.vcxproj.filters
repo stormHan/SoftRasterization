@@ -92,5 +92,8 @@
     <ClInclude Include="..\implement\rasterization\displayment.h">
       <Filter>头文件\rasterization</Filter>
     </ClInclude>
+    <ClInclude Include="..\implement\math\mathconst.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

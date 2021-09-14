@@ -4,6 +4,7 @@
 #define __VECTOR__
 
 #include "commondefine.h"
+#include "mathconst.h"
 
 template <typename T>
 class Vector2
@@ -89,6 +90,26 @@ public:
 	Float dot(const Vector3& rhs) const
 	{
 		return x * rhs.x + y * rhs.y + z * rhs.z;
+	}
+
+	Vector3 normalize()
+	{
+		Float len = length();
+
+		if (len > math::EPSILON)
+		{
+			Float recip = 1 / len;
+			return Vector3(x * recip, y * recip, z * recip);
+		}
+		else
+		{
+			return Vector3(0, 0, 0);
+		}
+	}
+
+	Float length() const
+	{
+		return (Float)sqrt(x * x + y * y + z * z);
 	}
 
 	T x;

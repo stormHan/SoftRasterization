@@ -143,8 +143,8 @@ namespace rasterization
 
 	const Vector3f Rasterization::computeBarycenterCoordinates(const Triangle2Dui& tri, const Point2Di& point)
 	{
-		Vector3f u = Vector3f(tri._p3._x - tri._p1._x, tri._p2._x - tri._p1._x, tri._p1._x - point._x)
-			.cross(Vector3f(tri._p3._y - tri._p1._y, tri._p2._y - tri._p1._y, tri._p1._y - point._y));
+		Vector3f u = Vector3f((Float)tri._p3._x - tri._p1._x, (Float)tri._p2._x - tri._p1._x, (Float)tri._p1._x - point._x)
+			.cross(Vector3f((Float)tri._p3._y - tri._p1._y, (Float)tri._p2._y - tri._p1._y, (Float)tri._p1._y - point._y));
 
 		if (std::abs(u.z) < 1) return Vector3f(-1, 1, 1);
 		return Vector3f(1.f - (u.x + u.y) / u.z, u.y / u.z, u.x / u.z);
